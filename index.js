@@ -1,30 +1,60 @@
 const express = require("express");
-
-//user 데이터 보관을 위한 객체 생성 함수
-function user_struct(LoginId, Password, Name, Birth, Belong, Email) {
-	let object = {
-		loginId: LoginId,
-		password: Password,
-		name: Name,
-		birth: Birth,
-		belong: Belong,
-		email: Email,
-	}
-	return object;
-}
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
 const app = express();
 const port = 3000;
+
+app.use(cors({
+	origin:"*",
+}));
 app.use(express.json())
 app.use(express.static('public'));
+
+app.get('', (req, res) => { res.sendFile(__dirname + '/public/html/login.html') });
+app.get('/signup', (req, res) => { res.sendFile(__dirname + '/public/html/signup.html') });
+app.get('/calendar', (req, res) => { res.sendFile(__dirname + '/public/html/calendar.html') });
 
 //user 데이터 보관용 배열 선언
 let userData = [];
 
 app.post('/signup', (req, res) => {
 	userData.push(req.body);
-	console.log(userData);
-	res.sendStatus(200);
+	res.json(JSON.stringify({ result: true }));
+})
+
+app.get('/login', (req, res) => {
+	let reqId = req.query.id;
+	let reqPw = req.query.pw;
+	let ok;
+	userData.forEach(function (value) {
+		ok = false;
+		if (value.id === reqId && value.pw === reqPw) {
+			ok = true;
+		}
+	})
+	if (ok) {
+		res.json({ result: true });
+	} else {
+		res.json({ result: false });
+	}
+})
+
+app.post('/login', (req, res) => {
+	let reqId = req.body.id;
+	let reqPw = req.body.pw;
+	let ok;
+	userData.forEach(function (value) {
+		ok = false;
+		if (value.id === reqId && value.pw === reqPw) {
+			ok = true;
+		}
+	})
+	if (ok) {
+		res.json({ result: true });
+	} else {
+		res.json({ result: false });
+	}
 })
 
 app.listen(port, () => {
