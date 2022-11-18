@@ -1,3 +1,49 @@
-nav{
-	border-bottom: 1px solid lightgrey;
+.navbar{
+	border-bottom: 1px solid #6667AB;
+	background-color: #6667AB;
+	padding: 1%;
+}
+
+.navbar-brand{
+	color: white;
+	font-size: 2rem;
+}
+
+.navbar-brand:hover{
+	color: white;
+	opacity: 0.8;
+}
+
+.container{
+	width: 40%;
+	border: 2px solid #6667AB;
+	border-radius: 50px;
+	margin-top: 7%;
+	padding: 3%;
+}
+
+.btn{
+	background-color: #6667AB;
+	color: white;
+	margin-right: 3%;
+}
+
+.btn:hover{
+	color: #6667AB;
+}
+
+.header{
+	font-size: 2rem;
+}
+
+.btn-box{
+	display: flex;
+	align-items: center;
+	margin-top: 2%;
+}
+
+.sign-up{
+	text-decoration: none;
+	font-weight: 600;
+	color: #6667AB;
 }
