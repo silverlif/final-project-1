@@ -1,0 +1,24 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "오픈소스웨어실습 28조 최종 프로젝트",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ossp-group28-final-project/final-project.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ossp-group28-final-project/final-project/issues"
+  },
+  "homepage": "https://github.com/ossp-group28-final-project/final-project#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  }
+}
