@@ -28,3 +28,28 @@ app.get('/calendar', (req, res) => { res.sendFile(__dirname + '/public/html/cale
 app.listen(port, () => {
 	console.log("app started");
 })
+
+app.get("/events", (req, res) => {
+	const events = [
+		{
+			title: "Event 1",
+			start: "2022-11-05", 
+			end: "2022-11-08",
+			descriptopm: "example 1"
+		},
+	  	{
+			title: "Event 2",
+			start: "2022-11-15", 
+			end: "2022-12-02",
+			descriptopm: "example 2"
+	  	},
+	  	{
+			title: "Event 3",
+			start: "2022-12-08",
+			end: "2022-12-10",
+			descriptopm: "example 3"
+	  	},
+	];
+  
+	res.json(events);
+  });

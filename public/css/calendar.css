@@ -1,0 +1,35 @@
+.navbar{
+	border-bottom: 1px solid #6667AB;
+	background-color: #6667AB;
+	padding: 1%;
+}
+
+.navbar-brand{
+	color: white;
+	font-size: 2rem;
+}
+
+.navbar-brand:hover{
+	color: white;
+	opacity: 0.8;
+}
+
+.header{
+	font-size: 2rem;
+}
+
+#calendar-container {
+    padding-top: 50px;
+    width: 80%;
+    margin: auto;
+}
+
+#calendar {
+    padding: 1em;
+    font-size: 14px;
+}
+
+.inputModal {
+    width: 65%;
+    margin-bottom: 10px;
+}
