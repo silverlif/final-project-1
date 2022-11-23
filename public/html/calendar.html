@@ -216,7 +216,15 @@
 						eventModal.find('input, textarea').val('');
 						eventModal.modal('hide');
 					});					
-			  	}			  
+			  	},		
+				  
+				events: {
+					url: "http://localhost:3000/events",
+					method: "GET",
+					failure: function () {
+					  console.log("there was an error while fetching events!");
+					},
+				} 
 			});
 			calendar.render();
 		  });
