@@ -7,7 +7,7 @@ let event = require("../data/event");
 let eventData = event;
 
 router.use((req, res, next) => {
-  next();
+	next();
 });
 
 //login.html 전송
