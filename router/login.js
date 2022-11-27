@@ -7,7 +7,7 @@ let user = require("../data/user");
 let userData = user.userData;
 
 router.use((req, res, next) => {
-  next();
+  	next();
 });
 
 //login.html 전송
@@ -15,8 +15,8 @@ router.get('/', (req, res) => { res.sendFile(path.join(__dirname + '/../public/h
 
 //로그인 기능 (userData와 대조)
 router.post('/login', (req, res) => {
-	let reqId = req.body.id;
-	let reqPw = req.body.pw;
+	const reqId = req.body.id;
+	const reqPw = req.body.pw;
 	let ok;
 	userData.forEach(function (value) {
 		ok = false;

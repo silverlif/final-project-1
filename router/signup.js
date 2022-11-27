@@ -7,7 +7,7 @@ let user = require("../data/user");
 let userData = user.userData;
 
 router.use((req, res, next) => {
-  next();
+  	next();
 });
 
 //signup.html 전송
