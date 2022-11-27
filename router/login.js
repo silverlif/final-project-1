@@ -2,9 +2,9 @@ const express = require('express');
 const path = require('path');
 const router = express.Router();
 
-//user 데이터 보관용 배열 선언
-let signup = require("./signup")
-let userData = signup.userData;
+//user 데이터 보관용 배열 import
+let user = require("../data/user");
+let userData = user.userData;
 
 router.use((req, res, next) => {
   next();
@@ -31,7 +31,4 @@ router.post('/login', (req, res) => {
 	}
 })
 
-module.exports = {
-	router,
-	userData,
-}
+module.exports = router;

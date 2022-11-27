@@ -2,8 +2,9 @@ const express = require('express');
 const path = require('path')
 const router = express.Router();
 
-//user 데이터 보관용 배열 선언
-let userData = [];
+//user 데이터 보관용 배열 import
+let user = require("../data/user");
+let userData = user.userData;
 
 router.use((req, res, next) => {
   next();
@@ -18,7 +19,4 @@ router.post('/', (req, res) => {
 	res.json(JSON.stringify({ result: true }));
 })
 
-module.exports = {
-	router,
-	userData,
-}
+module.exports = router;
