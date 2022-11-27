@@ -21,9 +21,13 @@ app.use('/signup', signup);
 const login = require("./router/login");
 app.use('/', login);
 
-//import router/signup.js
+//import router/calendar.js
 const calendar = require("./router/calendar");
 app.use('/calendar', calendar);
+
+//import router/group.js
+const group = require("./router/group");
+app.use('/group', group);
 
 //신호 대기
 app.listen(port, () => {
