@@ -5,8 +5,8 @@ body{
 }
 
 .navbar{
-	border-bottom: 1px solid #6667AB;
-	background-color: #6667AB;
+	border-bottom: 1px solid #5444DA;
+	background-color: #5444DA;
 }
 
 .navbar-brand{
@@ -25,7 +25,7 @@ body{
 
 .container{
 	width: 90%;
-	border: 2px solid #6667AB;
+	border: 2px solid #5444DA;
 	border-radius: 40px;
 	margin-top: 5%;
 	margin-bottom: 10%;
@@ -41,12 +41,12 @@ body{
 }
 
 .btn{
-	background-color: #6667AB;
+	background-color: #5444DA;
 	color: white;
 }
 
 .btn:hover{
-	color: #6667AB;
+	color: #5444DA;
 }
 
 .header{
