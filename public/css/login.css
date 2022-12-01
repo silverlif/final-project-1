@@ -1,6 +1,6 @@
 .navbar{
-	border-bottom: 1px solid #6667AB;
-	background-color: #6667AB;
+	border-bottom: 1px solid #5444DA;
+	background-color: #5444DA;
 }
 
 .navbar-brand{
@@ -15,20 +15,20 @@
 
 .container{
 	width: 40%;
-	border: 2px solid #6667AB;
+	border: 2px solid #5444DA;
 	border-radius: 50px;
 	margin-top: 7%;
 	padding: 3%;
 }
 
 .btn{
-	background-color: #6667AB;
+	background-color: #5444DA;
 	color: white;
 	margin-right: 3%;
 }
 
 .btn:hover{
-	color: #6667AB;
+	color: #5444DA;
 }
 
 .header{
@@ -44,5 +44,5 @@
 .sign-up{
 	text-decoration: none;
 	font-weight: 600;
-	color: #6667AB;
+	color: #5444DA;
 }
