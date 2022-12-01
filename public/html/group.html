@@ -6,18 +6,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>28조</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-	<link href="../css/login.css" rel="stylesheet"/>
+	<link href="../css/group.css" rel="stylesheet"/>
 </head>
 <body>
 	<nav class="navbar">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="">28조</a>
+		  	<a class="navbar-brand" href="/calendar">
+				<img src="../img/crown.png" width="60" height="60" class="mt-2">
+				BE THE 1
+			</a>
 		</div>
 	</nav>
-	<h1 id="title"></h1>
-	<h2 id="start"></h2>
-	<h2 id="end"></h2>
-	<h2 id="descriptopm"></h2>
+	<div class="wrapper">
+		<div class="container">
+			<div id="event-info">
+				<h1 id="title" style="margin-bottom: 2%"></h1>
+				<h5 id="start"></h5>
+				<h5 id="end"></h5>
+				<h5 id="descriptopm"></h5>
+			</div>
+			<h1 style="margin-bottom: 5%">모집 팀 현황</h1>
+			<ul id="team-list" class="list-group list-group-flush">
+			</ul>
+		</div>
+		<div class="btn-box">
+			<button id="create" class="btn">팀 생성</button>
+		</div>
+	</div>
 	<script>
 		const title = document.getElementById("title");
 		const start = document.getElementById("start");
@@ -26,22 +41,50 @@
 
 		const urlPharam = new URLSearchParams(window.location.search);
 		const eventId = {id: urlPharam.get("id")};
+		
+		let groupList = [];
 
 		fetch("/group", {
-				method: "POST",
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(eventId)
-			}).then((res)=>{
-				return res.json();
-			}).then((data)=>{
-				const event = JSON.parse(data);
-				title.innerHTML=event.title;
-				start.innerHTML=event.start;
-				end.innerHTML=event.end;
-				descriptopm.innerHTML=event.descriptopm;
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(eventId)
+		}).then((res)=>{
+			return res.json();
+		}).then((data)=>{
+			const event = JSON.parse(data);
+			title.textContent = event.title;
+			start.textContent = "시작일: "+ event.start;
+			end.textContent = "마감일: "+ event.end;
+			descriptopm.textContent = "정보: "+ event.descriptopm;
+		})
+		
+		fetch("/group/groupList", { 
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(eventId)
+		}).then((res) => res.json())
+		.then((groups) =>{
+			let list= document.getElementById("team-list");
+			list.innerHTML= "";
+			groups.forEach(group=>{
+				console.log(group);
+				let li= document.createElement("li");
+				li.innerHTML= `<text>팀명: ${group.groupName}<br>팀 참여 문의: ${group.groupContact}<br> 팀 소개:<br> ${group.groupIntro}</text>`;
+				li.className = "list-group-item";
+				list.appendChild(li);
 			})
+		})
+
+		const createBtn = document.getElementById("create");
+
+		createBtn.addEventListener("click", ()=>{
+			location.href = `./group/createGroup?id=${eventId.id}`;
+		})
+		
 		
 	</script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

@@ -1,1 +1,1 @@
-exports.groupData = [];
+exports.groups = [];
