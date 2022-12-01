@@ -39,7 +39,9 @@
 
 		form.addEventListener('submit', ()=>{
 			let id = document.getElementById("ID").value;
+			window.sessionStorage.setItem("id", id);
 			let pw = document.getElementById("PW").value;
+			window.sessionStorage.setItem("pw", pw);
 			let loginInfo = {
 				id: id,
 				pw: pw,
@@ -54,6 +56,7 @@
 				return res.json();
 			}).then((data)=>{
 				if(data.result){
+					window.sessionStorage.setItem('result', true);
 					location.href = "./calendar";
 					alert("로그인이 완료되었습니다.");
 				}else{

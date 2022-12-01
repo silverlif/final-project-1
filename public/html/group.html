@@ -34,6 +34,23 @@
 		</div>
 	</div>
 	<script>
+		let loginInfo = {
+				id: window.sessionStorage.getItem("id"),
+				pw: window.sessionStorage.getItem("pw"),
+			}
+		fetch("/login", {
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(loginInfo)
+		}).then((res)=>{
+			return res.json();
+		}).then((data)=>{
+			if(!data.result){
+				location.href = "../";
+			}
+		})
 		const title = document.getElementById("title");
 		const start = document.getElementById("start");
 		const end = document.getElementById("end");
