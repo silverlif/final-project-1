@@ -1,3 +1,9 @@
+body{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .navbar{
 	border-bottom: 1px solid #6667AB;
 	background-color: #6667AB;
@@ -17,24 +23,17 @@
 	font-size: 2rem;
 }
 
-.wrapper{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	padding-bottom: 10%;
-}
+.container{
+	width: 90%;
+	border: 2px solid #6667AB;
+	border-radius: 40px;
+	margin-top: 5%;
+	margin-bottom: 10%;
+	padding: 2% 3%;
 
-#event-info{
-	margin-bottom: 5%;
-}
-
-.header{
-	font-size: 2rem;
 }
 
 .btn-box{
-	width: 70%;
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
@@ -50,14 +49,11 @@
 	color: #6667AB;
 }
 
-.container{
-	width: 70%;
-	border: 2px solid #6667AB;
-	border-radius: 30px;
-	margin-top: 5%;
-	padding: 3%;
+.header{
+	font-size: 2.5rem;
+	font-weight: 500;
 }
 
-.list-group-item{
-	font-size: 1.5rem;
+label{
+	font-size: 1.3rem;
 }
