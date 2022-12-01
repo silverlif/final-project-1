@@ -4,7 +4,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 
 const app = express();
-const port = 80;
+const port = 3000;
 
 //미들 웨어 설정
 app.use(cors({
