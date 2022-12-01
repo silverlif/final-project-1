@@ -82,6 +82,23 @@
 	
 
 	<script>
+		let loginInfo = {
+				id: window.sessionStorage.getItem("id"),
+				pw: window.sessionStorage.getItem("pw"),
+			}
+		fetch("/login", {
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(loginInfo)
+		}).then((res)=>{
+			return res.json();
+		}).then((data)=>{
+			if(!data.result){
+				location.href = "../";
+			}
+		})
 		$("#edit-start, #edit-end").datepicker({
 			dateFormat: 'yy-mm-dd'
 		});
