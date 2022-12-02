@@ -10,7 +10,6 @@
 
 이 있다.
 
-
 ## Resources
 <img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>  
 
@@ -38,14 +37,37 @@ FullCalendar 5.8.0 https://fullcalendar.io/
 Moment.js 2.11.0 https://momentjs.com/  
 jQueryUI 1.12.1 https://jqueryui.com/
 
+## Examples
+- 프로필 작성
+![image](https://user-images.githubusercontent.com/116606136/205218137-65737f44-4721-44d8-9782-9315ef21b49e.png)
 
+- 팀 생성, 팀원 모집 및 팀 참여
+![image](https://user-images.githubusercontent.com/116606136/205218367-5b33be30-6d64-4cde-8d90-aecbabd6c91c.png)
 
+- 캘린더를 통한 공모전 일정 확인  
+![image](https://user-images.githubusercontent.com/116606136/205218327-b8f39100-588f-4375-bd47-6fed2b30873a.png)
 
+## Releases (versions)
+v0.1.0
 
+## How to Contribute
+We welcome contribution of everyone. The workflow of contributing to our project is as follows.
+1. Fork the repository
+2. Clone the repository
+3. Commit changes in your branch
+4. Submit Pull request
 
+## License
+Copyright (c) 2022 ossp-group28-final-project
+Licensed under MIT license
 
+## Code of Conduct
+This project has adopted Contributor Covenant Code of Conduct. Details can be found in CODE_OF_CONDUCT.md.
 
 ## Team members
 - 김승호
 - 신민규
 - 하예솜
+
+
+우수 프로젝트 시상 프로그램에 지원합니다.
