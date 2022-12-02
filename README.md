@@ -38,14 +38,37 @@ FullCalendar 5.8.0 https://fullcalendar.io/
 Moment.js 2.11.0 https://momentjs.com/  
 jQueryUI 1.12.1 https://jqueryui.com/
 
+## Examples
+- 공모전 일정 확인 캘린더
+![image](https://user-images.githubusercontent.com/116606136/205200310-bc569ba9-b6e9-4fa2-9979-5bfc37b3b4b8.png)
 
+- 세부 일정
+![image](https://user-images.githubusercontent.com/116606136/205200687-578c8c0a-ddbf-41da-81d9-d8e1488bdf18.png)
 
+- 팀 생성
+![image](https://user-images.githubusercontent.com/116606136/205200774-9c05ee05-9ed1-40d6-808a-159a256b858b.png)
 
+## Releases (versions)
+v0.1.0
 
+## How to contribute
+Thank you for your interest in contributing to our project! The workflow for contribution is as follows.
+1. Fork the repository
+2. Clone the reporitory
+3. Make changes on your branch
+4. Commit Changes
+5. Submit a pull request
 
+## License
+Copyright (c) 2022 ossp-group28-final-project
+Licensed under the MIT License.
 
+## Code of Conduct
+This project has adopted the Microsoft Open Source Code of Conduct.
 
 ## Team members
 - 김승호
 - 신민규
 - 하예솜
+
+우수 프로젝트 시상 프로그램에 지원합니다.
